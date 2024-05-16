@@ -1,6 +1,6 @@
 {# {{ config(
-    materialized='external', 
-    plugin='dbt_duckdb_kedro_datasets', 
+    materialized='external',
+    plugin='dbt_duckdb_kedro_datasets',
     kedro_yml_config={
             "type": "pandas.CSVDataset",
             "filepath": "./data/5_final/bikes.csv",

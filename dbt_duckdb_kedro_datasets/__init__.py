@@ -1,1 +1,1 @@
-from .ddkd import Plugin
+from .ddkd import Plugin  # noqa
