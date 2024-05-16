@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dbt_duckdb_kedro_datasets"
-version = "0.1.1"
+version = "0.1.2"
 description = "Combine duckdb-dbt and Kedro Dataset to easily read Kedro Dataset configs (yaml), enabling conversion of Kedro projects to dbt."
 authors = ["Conrad <conradbez1@gmail.com>"]
 readme = "README.md"
