@@ -1,0 +1,44 @@
+
+version: 2
+
+sources:
+  - name: dbt_duckdb_kedro_datasets_source
+    schema: main
+    meta:
+      plugin: dbt_duckdb_kedro_datasets
+    tables:
+      - name: dbt_duckdb_kedro_datasets_table
+        description: "A dbt_duckdb_kedro_datasets test"
+        meta:
+          type: pandas.CSVDataset
+          filepath: ./data/1_raw/bikes.csv
+          load_args:
+            sep: ','
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+    config:
+      materialized: external
+      plugin: dbt_duckdb_kedro_datasets
+      kedro_yml_config:
+        type: pandas.CSVDataset
+        filepath: ./data/5_final/bikes.csv
+        save_args:
+          index: False
+          date_format: '%Y-%m-%d %H:%M'
+          decimal: .

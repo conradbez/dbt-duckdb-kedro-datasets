@@ -1,0 +1,10 @@
+example_dbt:
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
+      threads: 1
+      plugins:
+        - module: dbt_duckdb_kedro_datasets
+
+  target: dev
