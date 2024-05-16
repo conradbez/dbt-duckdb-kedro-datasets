@@ -17,6 +17,7 @@ fastparquet = "^2024.2.0"
 [tool.poetry.group.dev.dependencies]
 ipdb = "^0.13.13"
 twine = "^5.0.0"
+pytest = "^8.2.0"
 
 [build-system]
 requires = ["poetry-core"]
