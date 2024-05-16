@@ -35,10 +35,3 @@ from {{ source('my_source', 'my_table') }}
 ```
 
 For a more complete example look at [this](example/example_dbt)
-
-## Todo
-
--[x] plugin backbone
--[x] initial install
--[x] initial execution
--[x] one config passed from yaml
