@@ -27,6 +27,21 @@ sources:
             sep: ','
 ```
 
+Make sure your `profiles.yml` has the plugin configured:
+
+```
+example_dbt:
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
+      threads: 1
+      plugins:
+        - module: dbt_duckdb_kedro_datasets
+
+  target: dev
+```
+
 Now we can access this CSV in dbt
 
 ```
